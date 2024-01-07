@@ -6,27 +6,111 @@
     <title>Portfolio - Matthieu Simon</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./normalize.css">
+    <script src="https://kit.fontawesome.com/57844a29cd.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
-        <h1 class="title-header">Matthieu Simon</h1>
         <nav class="nav-header">
-            
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#project">Mes Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <main class="main">
-        <section class="about">
+        <div>
+            <h1>Matthieu Simon</h1>
+            <h2>Développeur Frontend</h2>
+
+            <a href="#project">Mes projets</a>
+            <div>
+                <a href="#" target="_blank">Linkedin</a>
+                <a href="#" target="_blank">Github</a>
+            </div>
+        </div>
+
+        <img>
+
+        <section id="about" class="about">
+            <h3 class="title-section">About</h3>
+        </section>
+        <section id="skills" class="skills">
+            <h3 class="title-section">Skills</h3>
+            <div class="icon-skills">
+                <i class="fa-brands fa-html5 icon"></i>
+                <i class="fa-brands fa-css3-alt icon"></i>
+                <i class="fa-brands fa-sass icon"></i>
+                <i class="fa-brands fa-js icon"></i>
+                <i class="fa-brands fa-react icon"></i>
+            </div>
+        </section>
+        <section id="project" class="project">
+            <h3 class="title-section">Mes Projets</h3>
+            <div class="container-project">
+                <div class="card">
+                    <img>
+                    <div class="card-content">
+                        <h4>Sophie Bluel</h4>
+                        <p>Description</p>
+                        <div class="card-links">
+                            <a href="#" class="card-link" target="_blank">lien Github</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img>
+                    <div class="card-content">
+                        <h4>Sophie Bluel</h4>
+                        <p>Description</p>
+                        <div class="card-links">
+                            <a href="#" class="card-link" target="_blank">lien Github</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <img>
+                    <div class="card-content">
+                        <h4>Sophie Bluel</h4>
+                        <p>Description</p>
+                        <div class="card-links">
+                            <a href="#" class="card-link" target="_blank">lien Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
 
         </section>
-        <section class="project">
+        <section id="contact" class="contact">
+            <h3 class="title-section">Contact</h3>
+            <form class="form" action="#" method="post">
+                <div>
+                    <label for="lastname" class="label">Nom</label>
+                    <input type="text" id="lastname" name="lastname" class="input" required>
 
-        </section>
-        <section>
+                    <label for="firstname" class="label">Prénom</label>
+                    <input type="text" id="firstname" name="firstname" class="input" required>
+                </div>
+                <div>
+                    <label for="email" class="label">Email</label>
+                    <input type="email" id="email" name="email" class="input" required>
+                </div>
+                <div>
+                    <label for="message" class="label">Votre message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" class="textarea" required></textarea>
+                </div>
+                
 
+                <button type="submit" class="btn-form">Envoyer</button>
+            </form>
         </section>
     </main>
     <footer class="footer">
-        <p class="text-footer">© Tous droits réservés. 2024-present</p>
+        <p class="text-footer">Site réalisé par Matthieu Simon © 2024 - Tous droits reservés.</p>
     </footer>
 </body>
 </html>

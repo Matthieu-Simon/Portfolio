@@ -1,0 +1,109 @@
+/* Fonts */
+
+
+/* Color */
+:root {
+    --primary-color: #022B3A;
+    --secondary-color: #1F7A8C;
+    --tertiary-color: #BFDBF7;
+    --white-color: #FFF;
+}
+
+body {
+    padding: 20px;
+}
+.title-section {
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    padding: 15px;
+}
+/* Header */
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    font-size: 1.2em;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+}
+.nav-header, ul {
+    list-style-type: none;
+    display: flex;
+}
+.nav-header, li {
+    margin-right: 15px;
+    cursor: pointer;
+}
+/* Skills */
+.icon-skills {
+    display: flex;
+    justify-content: space-around;
+}
+.icon {
+    font-size: 5em;
+}
+.fa-html5 {
+    color: rgb(255, 115, 0);
+}
+.fa-css3-alt {
+    color: blue;
+}
+.fa-sass {
+    color: rgb(233, 79, 184);
+}
+.fa-js {
+    color: rgb(243, 243, 39);
+}
+.fa-react {
+    color: rgb(0, 213, 255);
+}
+/* Projects */
+.container-project {
+    display: flex;
+    justify-content: space-around;
+}
+.card {
+    border: 1px solid red;
+    padding: 30px 50px;
+}
+/* Contact */
+.contact {
+    padding: 20px 0;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.label {
+    display: flex;
+    padding: 10px 0;
+    font-size: 1.1em;
+}
+.input {
+    width: 270px;
+}
+.textarea {
+    padding: 10px;
+}
+.btn-form {
+    margin-top: 10px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    border: none;
+}
+.btn-form:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+/* Footer */
+.footer {
+    padding: 10px;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+}
