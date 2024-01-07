@@ -20,9 +20,9 @@
         </nav>
     </header>
     <main class="main">
-        <div>
-            <h1>Matthieu Simon</h1>
-            <h2>Développeur Frontend</h2>
+        <div class="presentation">
+            <h1 class="title">Matthieu Simon</h1>
+            <h2 class="subtitle">Développeur Frontend</h2>
 
             <a href="#project">Mes projets</a>
             <div>
@@ -34,10 +34,11 @@
         <img>
 
         <section id="about" class="about">
-            <h3 class="title-section">About</h3>
+            <h2 class="title-section">About</h2>
+            <p>Salut moi c'est Matthieu Simon, je suis Développeur Frontend</p>
         </section>
         <section id="skills" class="skills">
-            <h3 class="title-section">Skills</h3>
+            <h2 class="title-section">Skills</h2>
             <div class="icon-skills">
                 <i class="fa-brands fa-html5 icon"></i>
                 <i class="fa-brands fa-css3-alt icon"></i>
@@ -47,12 +48,12 @@
             </div>
         </section>
         <section id="project" class="project">
-            <h3 class="title-section">Mes Projets</h3>
+            <h2 class="title-section">Mes Projets</h2>
             <div class="container-project">
                 <div class="card">
                     <img>
                     <div class="card-content">
-                        <h4>Sophie Bluel</h4>
+                        <h3>Sophie Bluel</h3>
                         <p>Description</p>
                         <div class="card-links">
                             <a href="#" class="card-link" target="_blank">lien Github</a>
@@ -63,7 +64,7 @@
                 <div class="card">
                     <img>
                     <div class="card-content">
-                        <h4>Sophie Bluel</h4>
+                        <h3>Kasa</h3>
                         <p>Description</p>
                         <div class="card-links">
                             <a href="#" class="card-link" target="_blank">lien Github</a>
@@ -74,7 +75,7 @@
                 <div class="card">
                     <img>
                     <div class="card-content">
-                        <h4>Sophie Bluel</h4>
+                        <h3>Argent Bank</h3>
                         <p>Description</p>
                         <div class="card-links">
                             <a href="#" class="card-link" target="_blank">lien Github</a>
@@ -82,30 +83,30 @@
                     </div>
                 </div>
             </div>
-            
-
         </section>
         <section id="contact" class="contact">
-            <h3 class="title-section">Contact</h3>
+            <h2 class="title-section">Contact</h2>
             <form class="form" action="#" method="post">
                 <div>
                     <label for="lastname" class="label">Nom</label>
-                    <input type="text" id="lastname" name="lastname" class="input" required>
+                    <input type="text" id="lastname" name="lastname" placeholder="Votre Nom" class="input" required>
 
                     <label for="firstname" class="label">Prénom</label>
-                    <input type="text" id="firstname" name="firstname" class="input" required>
-                </div>
-                <div>
+                    <input type="text" id="firstname" name="firstname" placeholder="Votre Prénom" class="input" required>
+
                     <label for="email" class="label">Email</label>
-                    <input type="email" id="email" name="email" class="input" required>
+                    <input type="email" id="email" name="email" placeholder="Votre Email" class="input" required>
                 </div>
-                <div>
+                <div class="message-form">
                     <label for="message" class="label">Votre message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" class="textarea" required></textarea>
+                    <textarea name="message" id="message" cols="40" rows="8"
+                    placeholder="Votre Message..." class="textarea" required></textarea>
+
+                    <button type="submit" class="btn-form">Envoyer</button>
                 </div>
                 
 
-                <button type="submit" class="btn-form">Envoyer</button>
+                
             </form>
         </section>
     </main>
