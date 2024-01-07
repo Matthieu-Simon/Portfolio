@@ -66,6 +66,17 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
+.icon-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-section-skills {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-align: center;
+}
 .icon {
     font-size: 5em;
 }
@@ -92,10 +103,36 @@ body {
 .card {
     border: 3px solid var(--primary-color);
     border-radius: 10px;
-    width: 150px;
-    height: 150px;
-    padding: 30px;
+    width: 200px;
+    height: 250px;
+    padding: 10px;
     text-align: center;
+}
+.img-project {
+    width: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.kasaLogo {
+    padding: 37px 0;
+}
+.argentBankLogo {
+    padding: 49px 0;
+}
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+.title-card-content {
+    margin: 10px;
+}
+.icon-card {
+    font-size: 3em;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.icon-card:hover {
+    background-color: var(--secondary-color);
 }
 /* Contact */
 .contact {
