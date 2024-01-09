@@ -21,50 +21,62 @@
     </header>
     <main class="main">
         <div class="presentation">
-            <h1 class="title">Matthieu Simon</h1>
-            <h2 class="subtitle">Développeur Frontend</h2>
-
-            <a href="#project">Mes projets</a>
-            <div>
-                <a href="https://www.linkedin.com/in/matthieu-simon-8a9210222/" target="_blank">Linkedin</a>
-                <a href="https://github.com/Matthieu-Simon" target="_blank">Github</a>
+            <div class="content-presentation">
+                <div>
+                    <h1 class="title">Matthieu Simon</h1>
+                    <h2 class="subtitle">Développeur Frontend</h2>
+                </div>
+                <a class="link-project" href="#project">Mes projets</a>
             </div>
         </div>
-
-        <img>
-
         <section id="about" class="about">
-            <h2 class="title-section">About</h2>
-            <p>Salut moi c'est Matthieu Simon, je suis Développeur Frontend</p>
+            <h2 class="title-section">About Me</h2>
+            <div class="about-content">
+                <p class="text-about"><span class="slt-about">Salut !</span> Je suis Matthieu Simon, après 12 ans en tant que Technicien de Laboratoire j'ai décidé de changer de voie et de me reconvertir aux métiers de l'informatique et plus précisement en tant que Développeur Frontend. J'ai donc suivi une formation d'intégrateur web avec OpenClassRooms ou pendant 9 mois j'ai pu à travers différents projets apprendre les bases du métier.</p>
+                <div class="link-about">
+                    <img src="./images/photo.jpeg" alt="Photo Profil" class="img-profil">
+                    <div class="link-media">
+                        <a href="https://www.linkedin.com/in/matthieu-simon-8a9210222/" target="_blank">
+                            <i class="fa-brands fa-linkedin social-media"></i>
+                        </a>
+                        <a href="https://github.com/Matthieu-Simon" target="_blank">
+                            <i class="fa-brands fa-github social-media"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="skills" class="skills">
             <h2 class="title-section">Skills</h2>
-            <div class="icon-skills">
-                <div class="icon-content">
-                    <h3 class="title-section-skills">HTML5</h3>
-                    <i class="fa-brands fa-html5 icon"></i>
+            <div class="skills-content">
+                <div class="text-skills">
+                    <p class="text-section-skills">
+                        Voici les différents langages et outils que j'ai appris et pratiquer en réalisant les différents projets durant ma formation.
+                    </p>
+                    <p class="text-section-skills">
+                        C'est la stack classique du développeur frontend avec du HTML5 & CSS3 ainsi que le langage JavaScript et sa librairie ReactJS. Pour un des projets on devait utiliser Redux pour la gestion du state. J'ai aussi appris à utiliser Figma et Git pour le versionning des projets à réaliser.
+                    </p> 
                 </div>
-                <div class="icon-content">
-                    <h3 class="title-section-skills">CSS3</h3>
-                    <i class="fa-brands fa-css3-alt icon"></i>
+                <div class="stack-skills">
+                    <div class="icon-content">
+                        <div class="icon-back">
+                            <i class="fa-brands fa-html5 icon"></i>
+                            <i class="fa-brands fa-css3-alt icon"></i>
+                            <i class="fa-brands fa-sass icon"></i>
+                            <i class="fa-brands fa-js icon"></i>
+                        </div>
+                        <div class="icon-back">
+                            <i class="fa-brands fa-react icon"></i>
+                            <img src="./images/redux-icon.png" alt="Logo Redux" class="icon-skills">
+                            <i class="fa-brands fa-git-alt"></i>
+                            <img src="./images/figmaLogo.png" alt="Logo Figma" class="icon-skills"/>
+                        </div>
+                    </div>
                 </div>
-                <div class="icon-content">
-                    <h3 class="title-section-skills">Sass</h3>
-                    <i class="fa-brands fa-sass icon"></i>
-                </div>
-                <div class="icon-content">
-                    <h3 class="title-section-skills">JavaScript</h3>
-                    <i class="fa-brands fa-js icon"></i>
-                </div>
-                <div class="icon-content">
-                    <h3 class="title-section-skills">ReactJS</h3>
-                    <i class="fa-brands fa-react icon"></i>
-                </div>
-            </div>
         </section>
         <section id="project" class="project">
             <h2 class="title-section">Mes Projets</h2>
-            <div class="container-project">
+            <div class="content-project">
                 <div class="card">
                     <img class="img-project" src="./images/sophie-bluel.png" alt="Image du projet">
                     <div class="card-content">

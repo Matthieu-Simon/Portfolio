@@ -1,14 +1,16 @@
-/* Fonts */
+/***** Fonts *****/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Pacifico&display=swap');
 
-/* Color */
+/***** Color *****/
 :root {
-    --primary-color: #022B3A;
-    --secondary-color: #1F7A8C;
-    --tertiary-color: #BFDBF7;
-    --white-color: #FFF;
+    --primary-color: #092635;
+    --secondary-color: #1B4242;
+    --third-color: #5C8374;
+    --fourth-color: #9EC8B9;
+    --white-color: rgb(245, 245, 245);
+    --black-color: rgb(0, 0, 0);
 }
-
+/***** Général *****/
 body {
     font-family: "Open Sans", sans-serif;
 }
@@ -17,10 +19,20 @@ body {
     font-size: 1.5em;
     text-align: center;
     color: var(--white-color);
-    background-color: var(--primary-color);
-    padding: 15px;
+    padding: 20px 0;
+    margin: 0;
 }
-/* Header */
+.header, .title-section, .footer {
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #2C5364, #203A43, #0F2027); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.about-content, .skills-content, .content-project, .form {
+    padding: 40px 0;
+}
+/***** Header *****/
 .header {
     display: flex;
     justify-content: flex-end;
@@ -28,7 +40,6 @@ body {
     font-family: "Pacifico", sans-serif;
     font-size: 1.5em;
     font-weight: bold;
-    background-color: var(--primary-color);
 }
 .nav-header ul {
     list-style-type: none;
@@ -43,62 +54,144 @@ body {
     text-decoration: none;
 }
 .nav-header a:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
+    color: var(--fourth-color);
 }
-/* Presentation */
+/***** Presentation *****/
+.content-presentation {
+    padding-left: 100px;
+}
 .presentation {
-    text-align: center;
+    background: url("./images/ImageDev.jpeg") center/cover no-repeat;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 .title, .subtitle {
     font-family: "Pacifico", sans-serif;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 .title {
-    font-size: 4em;
+    font-size: 6em;
+    margin: 0;
 }
 .subtitle {
-    font-size: 2em;
+    font-size: 3em;
     text-decoration: underline;
 }
-/* Skills */
-.icon-skills {
+.link-project {
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+}
+.link-project:hover {
+    background-color: var(--primary-color);
+    border: none;
+}
+/***** About *****/
+.about-content {
     display: flex;
     justify-content: space-evenly;
+    color: var(--white-color);
+    background-color: var(--third-color);
+    font-family: "Pacifico";
+}
+.slt-about {
+    font-size: 2em;
+    font-family: "Pacifico", sans-serif;
+    /* color: var(--primary-color); */
+}
+.text-about {
+    width: 50%;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.link-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.link-about a {
+    text-decoration: none;
+}
+.social-media {
+    font-size: 2.5em;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+.social-media:hover {
+    color: var(--white-color);
+}
+.img-profil {
+    height: 250px;
+    border-radius: 50%;
+}
+.link-media {
+    text-align: center;
+    padding-top: 20px;
+}
+/***** Skills *****/
+.skills-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--third-color);
+    color: var(--white-color);
+}
+.text-skills {
+    width: 60%;
+}
+.text-section-skills {
+    text-align: center;
+    margin: auto;
+    font-size: 1.2em;
+}
+.stack-skills {
+    width: 30%;
 }
 .icon-content {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.title-section-skills {
-    font-size: 1.5em;
-    color: var(--primary-color);
-    text-decoration: underline;
-    text-align: center;
-}
 .icon {
-    font-size: 5em;
+    font-size: 4em;
+    margin-right: 15px;
 }
-.fa-html5 {
-    color: rgb(255, 115, 0);
+.icon-skills {
+    height: 50px;
+    margin-right: 25px;
+}
+.fa-git-alt {
+    font-size: 4em;
+    margin-right: 30px;
+}
+.fa-html5, .fa-git-alt {
+    color: rgb(228, 77, 38);
 }
 .fa-css3-alt {
-    color: blue;
+    color: rgb(21, 114, 182);
 }
 .fa-sass {
-    color: rgb(233, 79, 184);
+    color: rgb(204, 102, 153);
 }
 .fa-js {
-    color: rgb(243, 243, 39);
+    color: rgb(247, 223, 30);
 }
 .fa-react {
-    color: rgb(0, 213, 255);
+    color: rgb(97, 218, 251);
 }
-/* Projects */
-.container-project {
+/***** Projects *****/
+.content-project {
     display: flex;
     justify-content: space-evenly;
+    background-color: var(--third-color);
 }
 .card {
     border: 3px solid var(--primary-color);
@@ -107,6 +200,9 @@ body {
     height: 250px;
     padding: 10px;
     text-align: center;
+    cursor: pointer;
+    color: var(--primary-color);
+    background-color: var(--fourth-color);
 }
 .img-project {
     width: 200px;
@@ -117,32 +213,32 @@ body {
     padding: 37px 0;
 }
 .argentBankLogo {
-    padding: 49px 0;
+    padding: 47px 0;
 }
-.card-content {
+/* .card-content {
     position: relative;
     z-index: 1;
-}
+} */
 .title-card-content {
     margin: 10px;
+    text-decoration: underline;
 }
 .icon-card {
     font-size: 3em;
-    background-color: var(--primary-color);
+    background-color: var(--third-color);
     color: var(--white-color);
+    cursor: pointer;
 }
 .icon-card:hover {
     background-color: var(--secondary-color);
 }
-/* Contact */
-.contact {
-    padding: 20px 0;
-}
+/***** Contact *****/
 .form {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--third-color);
 }
 .label {
     display: flex;
@@ -178,12 +274,14 @@ body {
 }
 .btn-form:hover {
     background-color: var(--secondary-color);
+    color: var(--white-color);
     cursor: pointer;
 }
-/* Footer */
+/***** Footer *****/
 .footer {
     padding: 10px;
     text-align: center;
     color: var(--white-color);
-    background-color: var(--primary-color);
 }
+
+/*********** RESPONSIVE ***********/
