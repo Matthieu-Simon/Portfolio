@@ -4,20 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Matthieu Simon</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <script src="https://kit.fontawesome.com/57844a29cd.js" crossorigin="anonymous"></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
+    <div id="home"></div>
     <header class="header">
         <nav class="nav-header">
             <ul>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#project">Mes Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <!-- Partie Menu Mobile -->
+        <nav class="nav-header-mobile mobile-menu">
+            <ul>
+                <li>
+                    <a href="#home" onclick="toggleMobileMenu()">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" onclick="toggleMobileMenu()">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills" onclick="toggleMobileMenu()">
+                        Skills
+                    </a>
+                </li>
+                <li>
+                    <a href="#project" onclick="toggleMobileMenu()">
+                        Mes Projets
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" onclick="toggleMobileMenu()">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="burger-menu" onclick="toggleMobileMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
     </header>
     <main class="main">
         <div class="presentation">
@@ -30,7 +68,7 @@
             </div>
         </div>
         <section id="about" class="about">
-            <h2 class="title-section">About Me</h2>
+            <h2 class="title-section">About</h2>
             <div class="about-content">
                 <p class="text-about"><span class="slt-about">Salut !</span> Je suis Matthieu Simon, après 12 ans en tant que Technicien de Laboratoire j'ai décidé de changer de voie et de me reconvertir aux métiers de l'informatique et plus précisement en tant que Développeur Frontend. J'ai donc suivi une formation d'intégrateur web avec OpenClassRooms ou pendant 9 mois j'ai pu à travers différents projets apprendre les bases du métier.</p>
                 <div class="link-about">
@@ -59,17 +97,17 @@
                 </div>
                 <div class="stack-skills">
                     <div class="icon-content">
-                        <div class="icon-back">
+                        <div class="icon-top">
                             <i class="fa-brands fa-html5 icon"></i>
                             <i class="fa-brands fa-css3-alt icon"></i>
                             <i class="fa-brands fa-sass icon"></i>
                             <i class="fa-brands fa-js icon"></i>
                         </div>
-                        <div class="icon-back">
+                        <div class="icon-bottom">
                             <i class="fa-brands fa-react icon"></i>
-                            <img src="./images/redux-icon.png" alt="Logo Redux" class="icon-skills">
-                            <i class="fa-brands fa-git-alt"></i>
-                            <img src="./images/figmaLogo.png" alt="Logo Figma" class="icon-skills"/>
+                            <img src="./images/iconRedux.svg" alt="Logo Redux" class="icon-skills">
+                            <img src="./images/iconFigma.svg" alt="Logo Figma" class="icon-skills">
+                            <i class="fa-brands fa-git-alt icon-skills"></i>
                         </div>
                     </div>
                 </div>

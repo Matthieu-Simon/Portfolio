@@ -32,6 +32,30 @@ body {
 .about-content, .skills-content, .content-project, .form {
     padding: 40px 0;
 }
+/***** Burger Menu *****/
+.mobile-menu {
+    display: none;
+}
+.burger-menu {
+    display: none;
+    cursor: pointer;
+}
+.burger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: var(--white-color);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
 /***** Header *****/
 .header {
     display: flex;
@@ -40,28 +64,38 @@ body {
     font-family: "Pacifico", sans-serif;
     font-size: 1.5em;
     font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 .nav-header ul {
     list-style-type: none;
     display: flex;
 }
+.nav-header-mobile ul {
+    list-style-type: none;
+}
+.nav-header-mobile li {
+    cursor: pointer;
+    margin: 10px 0;
+}
 .nav-header li {
     margin-right: 15px;
     cursor: pointer;
 }
-.nav-header a {
+.nav-header a, .nav-header-mobile a {
     color: var(--white-color);
     text-decoration: none;
 }
-.nav-header a:hover {
+.nav-header, .nav-header-mobile a:hover {
     color: var(--fourth-color);
 }
-/***** Presentation *****/
+/***** Banner *****/
 .content-presentation {
-    padding-left: 100px;
+    padding-left: 50px;
 }
 .presentation {
-    background: url("./images/ImageDev.jpeg") center/cover no-repeat;
+    background: url("../images/ImageDev.jpeg") center/cover no-repeat;
     height: 150vh;
     display: flex;
     flex-direction: column;
@@ -96,7 +130,7 @@ body {
 .about-content {
     display: flex;
     justify-content: space-evenly;
-    color: var(--white-color);
+    color: var(--primary-color);
     background-color: var(--third-color);
     font-family: "Pacifico";
 }
@@ -140,12 +174,12 @@ body {
 .skills-content {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: var(--third-color);
     color: var(--white-color);
 }
 .text-skills {
-    width: 60%;
+    width: 65%;
 }
 .text-section-skills {
     text-align: center;
@@ -157,22 +191,26 @@ body {
 }
 .icon-content {
     display: flex;
+    justify-content: center;
+}
+.icon-top, .icon-bottom {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 .icon {
-    font-size: 4em;
-    margin-right: 15px;
+    font-size: 5em;
+    padding: 5px;
 }
 .icon-skills {
     height: 50px;
-    margin-right: 25px;
+    padding: 5px;
 }
 .fa-git-alt {
-    font-size: 4em;
-    margin-right: 30px;
+    font-size: 4.5em;
 }
-.fa-html5, .fa-git-alt {
+/* .fa-html5, .fa-git-alt {
     color: rgb(228, 77, 38);
 }
 .fa-css3-alt {
@@ -180,13 +218,14 @@ body {
 }
 .fa-sass {
     color: rgb(204, 102, 153);
+    font-size: 2.5em;
 }
 .fa-js {
     color: rgb(247, 223, 30);
 }
 .fa-react {
     color: rgb(97, 218, 251);
-}
+} */
 /***** Projects *****/
 .content-project {
     display: flex;
@@ -215,10 +254,6 @@ body {
 .argentBankLogo {
     padding: 47px 0;
 }
-/* .card-content {
-    position: relative;
-    z-index: 1;
-} */
 .title-card-content {
     margin: 10px;
     text-decoration: underline;
@@ -285,3 +320,98 @@ body {
 }
 
 /*********** RESPONSIVE ***********/
+/* Partie Tablette */
+@media screen and (max-width: 768px) {
+    /* Banner */
+    .presentation {
+        height: 100vh;
+    }
+    .content-presentation {
+        padding-left: 10px;
+    }
+    .title {
+        font-size: 3em;
+    }
+    .subtitle {
+        font-size: 2em;
+    }
+    .link-project {
+        padding: 10px;
+    }
+    /* About */
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-about {
+        width: 80%;
+        font-size: 1.5em;
+    }
+    /* Skills */
+    .skills-content {
+        flex-direction: column;
+    }
+    .text-skills {
+        width: 85%;
+        margin-bottom: 15px;
+    }
+    .icon-top, .icon-bottom {
+        flex-direction: row;
+    }
+    .icon {
+        font-size: 4em;
+    }
+    .fa-git-alt {
+        font-size: 3.5em;
+    }
+    /* Projets */
+    .content-project {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        margin: 10px 0;
+    }
+    /* Form */
+    .form {
+        flex-direction: column;
+    }
+}
+/* Partie Mobile*/
+@media screen and (max-width: 525px) {
+    /* Menu Mobile */
+    .burger-menu {
+        display: block;
+        padding: 8px;
+    }
+    .mobile-menu {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    /* Header */
+    .nav-header {
+        display: none;
+    }
+    /* Présentation */
+    .title, .subtitle {
+        color: var(--white-color);
+    }
+    /* Skills*/
+    .icon-content {
+        flex-direction: column;
+    }
+    .icon {
+        font-size: 2.5em;
+    }
+    .icon-skills {
+        height: 40px;
+    }
+    .fa-git-alt {
+        font-size: 2.5em;
+    }
+    /* Contact */
+    .textarea {
+        width: 80%;
+    }
+}
