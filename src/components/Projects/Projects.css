@@ -1,0 +1,51 @@
+.content-project {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--third-color);
+}
+.card {
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    width: 200px;
+    height: 250px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--primary-color);
+    background-color: var(--fourth-color);
+}
+.img-project {
+    width: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.kasaLogo {
+    padding: 37px 0;
+}
+.argentBankLogo {
+    padding: 47px 0;
+}
+.title-card-content {
+    margin: 10px;
+    text-decoration: underline;
+}
+.icon-card {
+    font-size: 3em;
+    background-color: var(--third-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+.icon-card:hover {
+    background-color: var(--secondary-color);
+}
+
+/***** Responsive *****/
+@media screen and (max-width: 768px) {
+    .content-project {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        margin: 10px 0;
+    }
+}

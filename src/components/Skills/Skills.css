@@ -1,0 +1,89 @@
+.skills-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--third-color);
+    color: var(--white-color);
+}
+.text-skills {
+    width: 65%;
+}
+.text-section-skills {
+    text-align: center;
+    margin: auto;
+    font-size: 1.2em;
+}
+.stack-skills {
+    width: 30%;
+}
+.icon-content {
+    display: flex;
+    justify-content: center;
+}
+.icon-top, .icon-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icon {
+    font-size: 5em;
+    padding: 5px;
+}
+.icon-skills {
+    height: 50px;
+    padding: 5px;
+}
+.fa-git-alt {
+    font-size: 4.5em;
+}
+/* .fa-html5, .fa-git-alt {
+    color: rgb(228, 77, 38);
+}
+.fa-css3-alt {
+    color: rgb(21, 114, 182);
+}
+.fa-sass {
+    color: rgb(204, 102, 153);
+    font-size: 2.5em;
+}
+.fa-js {
+    color: rgb(247, 223, 30);
+}
+.fa-react {
+    color: rgb(97, 218, 251);
+} */
+
+/***** Responsive *****/
+@media screen and (max-width: 768px) {
+    .skills-content {
+        flex-direction: column;
+    }
+    .text-skills {
+        width: 85%;
+        margin-bottom: 15px;
+    }
+    .icon-top, .icon-bottom {
+        flex-direction: row;
+    }
+    .icon {
+        font-size: 4em;
+    }
+    .fa-git-alt {
+        font-size: 3.5em;
+    }
+}
+@media screen and (max-width: 525px) {
+    .icon-content {
+        flex-direction: column;
+    }
+    .icon {
+        font-size: 2.5em;
+    }
+    .icon-skills {
+        height: 40px;
+    }
+    .fa-git-alt {
+        font-size: 2.5em;
+    }
+}
