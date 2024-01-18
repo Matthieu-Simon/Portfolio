@@ -2,7 +2,7 @@ import "./Banner.css";
 
 const Banner = () => {
     return(
-        <div className="presentation">
+        <section className="presentation">
             <div className="content-presentation">
                 <div>
                     <h1 className="title">Matthieu Simon</h1>
@@ -10,7 +10,7 @@ const Banner = () => {
                 </div>
                 <a className="link-project" href="#project">Mes projets</a>
             </div>
-        </div>
+        </section>
     )
 };
 

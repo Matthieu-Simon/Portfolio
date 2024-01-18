@@ -4,7 +4,7 @@ const Footer = () => {
     return(
         <footer className="footer">
             <p className="text-footer">
-                Developed by Matthieu Simon © - 2024
+                © 2024 Matthieu Simon, Tous droits réservés.
             </p>
         </footer>
     )

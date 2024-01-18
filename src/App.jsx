@@ -8,14 +8,17 @@ import Footer from "./layouts/Footer/Footer";
 import './App.css';
 
 const App = () => {
+
   return (
     <div>
       <Header/>
-      <Banner />
-      <About />
-      <Skills />
-      <Projects />
-      <Form />
+      <main>
+        <Banner />
+        <About />
+        <Skills />
+        <Projects />
+        <Form />
+      </main>
       <Footer />
     </div>
   )

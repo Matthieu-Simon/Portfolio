@@ -5,15 +5,15 @@ import ImageProfil from "../../assets/images/photo.jpeg";
 import "./About.css";
 
 const About = () => {
-    const myText = "Je suis Matthieu Simon, après 12 ans en tant que Technicien de Laboratoire j'ai décidé de changer de voie et de me reconvertir aux métiers de l'informatique et plus précisement en tant que Développeur Frontend. J'ai donc suivi une formation d'intégrateur web avec OpenClassRooms ou pendant 9 mois j'ai pu à travers différents projets apprendre les bases du métier.";
-    
     return(
         <section id="about" className="about">
             <h2 className="title-section">About</h2>
             <div className="about-content">
+                <h1>Matthieu Simon</h1>
                 <p className="text-about">
-                    <span className="slt-about">Salut !</span>
-                    {myText}
+                    {/* <span className="slt-about">Salut !</span>
+                    Je suis Matthieu Simon, après 12 ans en tant que Technicien de Laboratoire j'ai décidé de changer de voie et de me reconvertir aux métiers de l'informatique et plus précisement en tant que Développeur Frontend. J'ai donc suivi une formation d'intégrateur web avec OpenClassRooms ou pendant 9 mois j'ai pu à travers différents projets apprendre les bases du métier. */}
+                    
                 </p>
                 <div className="link-about">
                     <img 

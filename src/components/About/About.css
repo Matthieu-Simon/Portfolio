@@ -1,9 +1,10 @@
 .about-content {
     display: flex;
     justify-content: space-evenly;
-    color: var(--primary-color);
+    color: var(--white-color);
     background-color: var(--third-color);
-    font-family: "Pacifico";
+    /* font-family: "Pacifico"; */
+    padding: 50px 0;
 }
 .slt-about {
     font-size: 2em;
@@ -12,7 +13,7 @@
 }
 .text-about {
     width: 50%;
-    font-size: 2em;
+    font-size: 1.3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,10 +29,10 @@
 .social-media {
     font-size: 2.5em;
     margin-right: 10px;
-    color: var(--primary-color);
+    color: var(--white-color);
 }
 .social-media:hover {
-    color: var(--white-color);
+    color: var(--primary-color);
 }
 .img-profil {
     height: 250px;

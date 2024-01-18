@@ -1,23 +1,63 @@
-import Navbar from "../../components/Navbar/Navbar";
+import { useState, useEffect } from "react";
 import "./Header.css";
 
 const Header = () => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
 
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
 
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY;
+        setIsSticky(scrollPosition > 100);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+    
     return(
-        <div id="home">
-            <header id="header" className="header">
-                <Navbar />
-                
-                    <div 
-                    className="burger-menu"
-                    >
-                    <div className="bar1"></div>
-                    <div className="bar2"></div>
-                    <div className="bar3"></div>
+        <div className={`header ${isSticky ? "sticky" : ""}`}>
+            <nav className="nav-header">
+                <ul>
+                    <li><a href="#home" onClick={scrollToTop}>Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#project">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            {isMobileMenuOpen && (
+                <div className="nav-header-mobile mobile-menu">
+                    <ul>
+                        <li><a href="#home" onClick={scrollToTop}>Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#project">Projets</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
-                
-            </header>
+            )}
+            <div 
+            className={`burger-menu ${isMobileMenuOpen ? "change" : ""}`}
+            onClick={toggleMobileMenu}
+            >
+                <div className="bar1"></div>
+                <div className="bar2"></div>
+                <div className="bar3"></div>
+            </div>
         </div>
     )
 };
