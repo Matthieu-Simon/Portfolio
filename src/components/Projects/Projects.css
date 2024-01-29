@@ -1,28 +1,26 @@
 .content-project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
     background-color: var(--third-color);
+    padding: 50px 0;
 }
 .list-project {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
 }
 .card {
-    border: 3px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-radius: 10px;
-    width: 200px;
-    height: 250px;
+    width: 50%;
     padding: 20px 10px;
+    margin-bottom: 10px;
     text-align: center;
-    cursor: pointer;
     color: var(--primary-color);
     background-color: var(--fourth-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .img-project {
-    width: 200px;
     border-radius: 5px;
     object-fit: cover;
 }
@@ -45,19 +43,42 @@
 .icon-card:hover {
     background-color: var(--secondary-color);
 }
-
+.list-skills-content {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+.list-skills {
+    list-style-type: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    
+}
+.list-skills i {
+    font-size: 1.5em;
+}
 /***** Responsive *****/
-@media screen and (max-width: 768px) {
-    .list-project {
-        display: flex;
+@media screen and (max-width: 992px) {
+    .list-skills-content {
         flex-direction: column;
         align-items: center;
     }
-    .content-project {
-        flex-direction: column;
-        align-items: center;
+    .list-skills {
+        width: 30%;
+        justify-content: center;
+        margin-bottom: 10px;
     }
-    .card {
-        margin: 10px 0;
+}
+@media screen and (max-width: 575px) {
+    .list-skills {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+    .description-project {
+        font-size: 0.8em;
     }
 }

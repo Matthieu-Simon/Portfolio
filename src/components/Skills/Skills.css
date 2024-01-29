@@ -1,92 +1,49 @@
 .skills-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: var(--third-color);
     color: var(--white-color);
+    padding: 100px 0;
 }
-.text-skills {
-    width: 65%;
-}
-.text-section-skills {
-    text-align: center;
-    margin: auto;
-    font-size: 1.2em;
-}
-.stack-skills {
-    width: 30%;
-}
-/* .icon-content {
+.icon-content{
     display: flex;
-    justify-content: center;
-} */
-.icon-top, .icon-bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
-.icon {
-    font-size: 5em;
-    padding: 15px;
-    border: 1px solid red;
+.icon-content i {
+    border: 3px solid var(--primary-color);
+    font-size: 3em;
+    padding: 50px;
+    margin: 5px;
+    color: var(--secondary-color);
+    cursor: pointer;
 }
-.icon-skills {
-    height: 75px;
-    padding: 15px;
-    border: 1px solid red;
+.icon-content i:hover {
+    color: var(--white-color);
+    border: 3px solid var(--white-color);
 }
-.fa-git-alt {
-    font-size: 4.5em;
-}
-/* .fa-html5, .fa-git-alt {
-    color: rgb(228, 77, 38);
-}
-.fa-css3-alt {
-    color: rgb(21, 114, 182);
-}
-.fa-sass {
-    color: rgb(204, 102, 153);
-    font-size: 2.5em;
-}
-.fa-js {
-    color: rgb(247, 223, 30);
-}
-.fa-react {
-    color: rgb(97, 218, 251);
-} */
-
 /***** Responsive *****/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
     .skills-content {
-        flex-direction: column;
+        padding: 70px 0;
     }
-    .text-skills {
-        width: 85%;
-        margin-bottom: 15px;
+   .icon-content i {
+        padding: 30px;
+   }
+}
+@media screen and (max-width: 768px) {
+    .icon-content {
+        justify-content: center;
     }
     .icon-top, .icon-bottom {
-        flex-direction: row;
-    }
-    .icon {
-        font-size: 4em;
-    }
-    .fa-git-alt {
-        font-size: 3.5em;
-    }
-}
-@media screen and (max-width: 525px) {
-    .icon-content {
+        display: flex;
         flex-direction: column;
     }
-    .icon {
-        font-size: 3em;
+    .icon-content i {
+        padding: 20px;
     }
-    .icon-skills {
-        height: 45px;
-    }
-    .fa-git-alt {
-        font-size: 3em;
+}
+@media screen and (max-width: 575px) {
+    .icon-content i {
+        font-size: 2em;
     }
 }

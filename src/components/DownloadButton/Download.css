@@ -1,0 +1,17 @@
+.btn-resume {
+    position: relative;
+    text-decoration: none;
+    border: none;
+    border-radius: 50%;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.btn-resume:hover {
+    background-color: var(--secondary-color);
+}
+.icon-cv {
+    font-size: 1em;
+}

@@ -62,7 +62,7 @@ const Form = () => {
             <h2 className="title-section">Contact</h2>
             <form className="form" action="#" method="post" onSubmit={handleSubmit}>
                 <h3 className="subtitle-section">Me contacter</h3>
-    
+                
                 <a href="mailto:simon.matthieu89@gmail.com" className="link-mail">
                     <span className="mail">simon.matthieu89@gmail.com</span>
                 </a>

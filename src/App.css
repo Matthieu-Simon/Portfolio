@@ -25,6 +25,3 @@ body {
 .header, .title-section, .footer {
     background: linear-gradient(to left, #2C5364, #203A43, #0F2027); 
 }
-/* .about-content, .skills-content, .content-project, .form {
-    padding: 100px 0;
-} */

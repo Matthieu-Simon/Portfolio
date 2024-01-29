@@ -1,12 +1,4 @@
-import ImageFigma from "../../assets/images/iconFigma.svg";
-import ImageRedux from "../../assets/images/iconRedux.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
-import { faCss3Alt } from "@fortawesome/free-brands-svg-icons";
-import { faJs } from "@fortawesome/free-brands-svg-icons";
-import { faSass } from "@fortawesome/free-brands-svg-icons";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
-import { faGitAlt } from "@fortawesome/free-brands-svg-icons";
+import "boxicons/css/boxicons.min.css";
 import "./Skills.css";
 
 const Skills = () => {
@@ -14,32 +6,20 @@ const Skills = () => {
         <section id="skills" className="skills">
             <h2 className="title-section">Skills</h2>
             <div className="skills-content">
-                <div className="stack-skills">
-                    <div className="icon-content">
-                        <div className="icon-top">
-                            <FontAwesomeIcon
-                                icon={faHtml5} className="icon"
-                            />
-                            <FontAwesomeIcon 
-                                icon={faCss3Alt} className="icon"
-                            />
-                            <FontAwesomeIcon 
-                                icon={faSass} className=" icon"
-                            />
-                            <FontAwesomeIcon 
-                                icon={faJs} className="icon" 
-                            />
-                        </div>
-                        <div className="icon-bottom">
-                            <FontAwesomeIcon 
-                                icon={faReact} className="icon" 
-                            />
-                            <img src={ImageRedux} alt="Logo Redux" className="icon-skills" />
-                            <img src={ImageFigma} alt="Logo Figma" className="icon-skills" />
-                            <FontAwesomeIcon 
-                                icon={faGitAlt} className="icon-skills"
-                            />
-                        </div>
+                <div className="icon-content">
+                    <div className="icon-top">
+                        <i className='bx bxl-html5'></i>
+                        <i className='bx bxl-css3'></i>
+                        <i className='bx bxl-javascript'></i>
+                        <i className='bx bxl-react'></i>
+                        <i className='bx bxl-redux'></i>
+                    </div>
+                    <div className="icon-bottom">
+                        <i className='bx bxl-sass'></i>
+                        <i className='bx bxl-tailwind-css'></i>
+                        <i className='bx bxl-figma'></i>
+                        <i className='bx bxl-github'></i>
+                        <i className='bx bxl-git'></i>
                     </div>
                 </div>
             </div>

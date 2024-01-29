@@ -1,7 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import ImageProfil from "../../assets/images/photo.jpeg";
+import DownloadButton from "../DownloadButton/DownloadButton";
+import ImageProfil from "../../../public/images/photo.jpeg";
 import "./About.css";
 
 const About = () => {
@@ -9,31 +7,26 @@ const About = () => {
         <section id="about" className="about">
             <h2 className="title-section">About</h2>
             <div className="about-content">
-                <h1>Matthieu Simon</h1>
-                <p className="text-about">
-                    {/* <span className="slt-about">Salut !</span>
-                    Je suis Matthieu Simon, après 12 ans en tant que Technicien de Laboratoire j'ai décidé de changer de voie et de me reconvertir aux métiers de l'informatique et plus précisement en tant que Développeur Frontend. J'ai donc suivi une formation d'intégrateur web avec OpenClassRooms ou pendant 9 mois j'ai pu à travers différents projets apprendre les bases du métier. */}
-                    
-                </p>
+                <div className="description-about-content">
+                    <h1 className="title-about">Matthieu Simon</h1>
+                    <h2 className="subtitle">Développeur Front-end.</h2>
+                    <p className="text-about">Bonjour, je suis Matthieu Simon, passioné par le développement web et particulièrement le développement front-end avec une spécialité en ReactJS. Aprés avoir découvert la programmation, j'ai décidé de m'y consacrer pleinement. J'ai suivi une formation d'intégrateur web avec OpenClassRooms ou j'ai pu acquérir des bases en développement web en apprenant le HTML, CSS, le langage JavaScript ainsi que sa bibliothèque ReactJS en réalisant différents projets.</p>
+                    <p className="text-about">En plus de ma formation, je suis maintien une veille concernant les dernières tendances et technologies du développement web. Je continue mon apprentissage autour de l'ecosystème JavaScript.</p>
+                    <p className="text-about">Je suis actuellement ouvert à de nouvelles opportunités où je pourrais contribuer, apprendre et évoluer en tant que développeur web et me perfectionner dans la création d'interfaces utilisateur dynamiques.</p>
+                </div>
                 <div className="link-about">
-                    <img 
-                        className="img-profil"
-                        src={ImageProfil} alt="Photo Profil" 
-                    />
+                    <img className="img-profil" src={ImageProfil} alt="Photo Profil" />
                     <div className="link-media">
                         <a 
                             href="https://www.linkedin.com/in/matthieu-simon-8a9210222/" 
                             target="_blank" 
                             rel="noreferrer">
-                            <FontAwesomeIcon 
-                                icon={faLinkedin} className="social-media"
-                            />
+                            <i className="bx bxl-linkedin-square social-media" />
                         </a>
                         <a href="https://github.com/Matthieu-Simon" target="_blank" rel="noreferrer">
-                            <FontAwesomeIcon
-                                icon={faGithub} className="social-media"
-                            />
+                            <i className="bx bxl-github social-media" />
                         </a>
+                        <DownloadButton />
                     </div>
                 </div>
             </div>

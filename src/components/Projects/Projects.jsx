@@ -1,68 +1,68 @@
-import ImageKasa from "../../assets/images/Kasa.png";
-import ImageArgentBank from "../../assets/images/argentBankLogo.png";
-import ImageBluel from "../../assets/images/sophie-bluel.png"
+import { useState, useEffect } from "react";
+import ImageKasa from "../../../public/images/projets/Kasa.png";
+import ImageArgentBank from "../../../public/images/projets/argentBankLogo.png";
+import ImageBluel from "../../../public/images/projets/sophie-bluel.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faHtml5, faCss3Alt, faJs, faReact, faGithub  } from "@fortawesome/free-brands-svg-icons";
+import { db, collection, getDocs } from "../../firebase/firebase";
+import "boxicons/css/boxicons.min.css";
 import "./Projects.css";
 
 const Projects = () => {
+    const [projects, setProjects] = useState([]);
+
+    const projectImages = {
+        "Kasa": ImageKasa,
+        "Argent Bank": ImageArgentBank,
+        "Portfolio - Sophie Bluel": ImageBluel
+    };
+
+    useEffect(() => {
+        fetchProjects();
+    }, []);
+
+    const fetchProjects = async () => {
+        try {
+            const projectsCollection = await getDocs(collection(db, "Projects"));
+            const projectsData = projectsCollection.docs.map((doc) => doc.data());
+    
+            setProjects(projectsData);
+        } catch (error) {
+            console.error("Error fetching projects: ", error);
+        }
+    };
+
     return(
         <section id="project" className="project">
             <h2 className="title-section">Projets</h2>
             <div className="content-project">
-                <p className="text-content-project">TEST</p>
                 <div className="list-project">
-                    <div className="card">
+                {projects.map((project, index) => (
+                    <div className="card" key={index}>
                         <img 
                             className="img-project" 
-                            src={ImageBluel} alt="Image du projet" 
+                            src={projectImages[project.title]} alt={`Image du projet ${project.title}`} 
                         />
-                        <div className="card-content">
-                            <h3 className="title-card-content">Sophie Bluel</h3>
-                            <div className="description-content"></div>
-                            <div className="card-links">
-                                <a href="https://github.com/Matthieu-Simon/Portfolio-Architecte" className="card-link" target="_blank" rel="noreferrer">
-                                <FontAwesomeIcon 
-                                    icon={faGithub} className="icon-card"
-                                />
-                                </a>
-                            </div>
+                        <h3 className="title-card-content">{project.title}</h3>
+                        <a 
+                            href={project.link} className="card-link"
+                            target="_blank" rel="noreferrer"
+                        >
+                            <i className='bx bxl-github icon-card'></i>
+                        </a>
+                        <div>
+                            <p className="description-project">{project.description}</p>
+                            <ul className="list-skills-content">
+                                {project.technologies && Array.isArray(project.technologies) && (project.technologies.map((tech, techIndex) => (
+                                    <li key={techIndex} className="list-skills">
+                                        <i className={tech.icon}></i> {tech.name}
+                                    </li>
+                                    ))
+                                )}
+                            </ul>
                         </div>
                     </div>
-                    <div className="card">
-                        <img 
-                            className="img-project kasaLogo" 
-                            src={ImageKasa} alt="Image du projet" 
-                        />
-                        <div className="card-content">
-                            <h3 className="title-card-content">Kasa</h3>
-                            <div className="description-content"></div>
-                            <div className="card-links">
-                                <a href="https://github.com/Matthieu-Simon/Kasa" className="card-link" target="_blank" rel="noreferrer">
-                                <FontAwesomeIcon 
-                                    icon={faGithub} className="icon-card"
-                                />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="card">
-                        <img 
-                            className="img-project argentBankLogo" 
-                            src={ImageArgentBank} alt="Image du projet"
-                        />
-                        <div className="card-content">
-                            <h3 className="title-card-content">Argent Bank</h3>
-                            <div className="description-content"></div>
-                            <div className="card-links">
-                                <a href="https://github.com/Matthieu-Simon/ArgentBank-website" className="card-link" target="_blank" rel="noreferrer">
-                                    <FontAwesomeIcon 
-                                        icon={faGithub} className="icon-card"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                ))}
                 </div>
             </div>
         </section>

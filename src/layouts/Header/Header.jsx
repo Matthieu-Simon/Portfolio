@@ -31,6 +31,7 @@ const Header = () => {
     return(
         <div className={`header ${isSticky ? "sticky" : ""}`}>
             <nav className="nav-header">
+                <a href="" className="icon-github-nav"><i className='bx bxl-github'></i></a>
                 <ul>
                     <li><a href="#home" onClick={scrollToTop}>Home</a></li>
                     <li><a href="#about">About</a></li>

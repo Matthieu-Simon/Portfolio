@@ -11,6 +11,10 @@
     font-size: 2em;
     text-decoration: underline;
 }
+.img-mail {
+    margin-right: 5px;
+    color: white;
+}
 .link-mail {
     border: 2px solid var(--primary-color);
     border-radius: 10px;
@@ -19,6 +23,8 @@
     color: var(--primary-color);
     text-decoration: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 .link-mail:hover {
     background-color: var(--secondary-color);
@@ -59,11 +65,11 @@
     color: var(--white-color);
     background-color: var(--primary-color);
     border: none;
+    cursor: pointer;
 }
 .btn-form:hover {
     background-color: var(--secondary-color);
     color: var(--white-color);
-    cursor: pointer;
 }
 .error {
     color: black;
@@ -74,7 +80,16 @@
         flex-direction: column;
     }
 }
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 575px) {
+    .link-mail {
+        width: 70%;
+    }
+    .mail {
+        font-size: 0.8em;
+    }
+    .input {
+        width: 95%;
+    }
     .textarea {
         width: 80%;
     }
