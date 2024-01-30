@@ -33,6 +33,7 @@
 @media screen and (max-width: 768px) {
     .icon-content {
         justify-content: center;
+        flex-direction: row;
     }
     .icon-top, .icon-bottom {
         display: flex;
