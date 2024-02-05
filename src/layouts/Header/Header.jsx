@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import "./Header.css";
 
 const Header = () => {
@@ -31,9 +32,13 @@ const Header = () => {
     return(
         <div className={`header ${isSticky ? "sticky" : ""}`}>
             <nav className="nav-header">
-                <a href="" className="icon-github-nav"><i className='bx bxl-github'></i></a>
+                <a href="https://github.com/Matthieu-Simon" className="icon-github-nav"><i className='bx bxl-github'></i></a>
                 <ul>
-                    <li><a href="#home" onClick={scrollToTop}>Home</a></li>
+                    <li>
+                        <Link to="/" onClick={scrollToTop}>
+                            Home
+                        </Link>
+                    </li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#project">Projets</a></li>

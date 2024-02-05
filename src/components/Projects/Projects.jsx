@@ -1,9 +1,8 @@
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ImageKasa from "../../../public/images/projets/Kasa.png";
 import ImageArgentBank from "../../../public/images/projets/argentBankLogo.png";
 import ImageBluel from "../../../public/images/projets/sophie-bluel.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHtml5, faCss3Alt, faJs, faReact, faGithub  } from "@fortawesome/free-brands-svg-icons";
 import { db, collection, getDocs } from "../../firebase/firebase";
 import "boxicons/css/boxicons.min.css";
 import "./Projects.css";
@@ -64,6 +63,9 @@ const Projects = () => {
                     </div>
                 ))}
                 </div>
+                <Link to="Admin" className="link-add-project">
+                    Ajouter un projet
+                </Link>
             </div>
         </section>
     )
