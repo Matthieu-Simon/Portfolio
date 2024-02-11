@@ -94,4 +94,10 @@
     .description-project {
         font-size: 0.8em;
     }
+    .list-project {
+        width: 90%;
+    }
+    .card {
+        width: 100%;
+    }
 }
