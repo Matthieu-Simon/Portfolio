@@ -9,6 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
 }
 .card {
     border: 1px solid var(--primary-color);
@@ -85,9 +86,6 @@
         justify-content: center;
         margin-bottom: 10px;
     }
-    .list-project {
-        width: 90%;
-    }
 }
 @media screen and (max-width: 575px) {
     .list-skills {
@@ -97,10 +95,7 @@
     .description-project {
         font-size: 0.8em;
     }
-    .list-project {
-        width: 90%;
-    }
     .card {
-        width: 100%;
+        width: 90%;
     }
 }
