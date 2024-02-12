@@ -85,6 +85,9 @@
         justify-content: center;
         margin-bottom: 10px;
     }
+    .list-project {
+        width: 90%;
+    }
 }
 @media screen and (max-width: 575px) {
     .list-skills {
