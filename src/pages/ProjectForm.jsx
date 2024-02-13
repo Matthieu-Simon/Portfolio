@@ -231,7 +231,7 @@ const ProjectForm = () => {
         </section>
         <section className="section-form-project">
           <h2 className="title-form-project">Liste des Projets</h2>
-          <ul className="list-project">
+          <ul className="list-update-project">
             {projects && projects.map(project => (
               <li key={project.id} className="list-form-project">
                 <h3>{project.title}</h3>

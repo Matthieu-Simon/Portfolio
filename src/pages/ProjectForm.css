@@ -20,7 +20,7 @@
 .form-projects input, textarea {
     margin-top: 10px;
 }
-.list-project {
+.list-update-project {
     padding: 0;
 }
 .list-form-project {
@@ -36,7 +36,7 @@
     border: none;
     cursor: pointer;
 }
-.btn-form-projet:hover {
+.btn-form-project:hover {
     background-color: var(--secondary-color);
     color: var(--white-color);
 }
