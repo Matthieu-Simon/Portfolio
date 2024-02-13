@@ -32,7 +32,7 @@ const Header = () => {
     return(
         <div className={`header ${isSticky ? "sticky" : ""}`}>
             <nav className="nav-header">
-                <a href="https://github.com/Matthieu-Simon" className="icon-github-nav"><i className='bx bxl-github'></i></a>
+                <a href="https://github.com/Matthieu-Simon" className="icon-github-nav"><i className='bx bxl-github' target="_blank" rel="noreferrer"></i></a>
                 <ul>
                     <li>
                         <Link to="/" onClick={scrollToTop}>
